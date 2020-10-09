@@ -1,0 +1,25 @@
+<div class="post-detail-container" *ngIf="singlePost">
+    <img src="assets/default-post-cover.png" alt="" class="post-cover">
+    <div class="post-content">
+        <h3 class="username">{{singlePost.data._creator.username}}</h3>
+        <p class="date-time">{{singlePost.data.createdAt | date:'medium'}}</p>
+        <h1 class="post-title">{{singlePost.data.title}}</h1>
+        <p class="post-description">
+            {{singlePost.data.text}}
+        </p>
+    </div>
+
+    <div class="comments-container">
+        <h3 class="comments">Add Comments</h3>
+        <textarea class="new-comment" cols="30" rows="10" #commentText></textarea>
+        <a routerLink="['/post', post._id, post._creator._id]">
+            <button class="comment-btn" >Submit</button>
+        </a>
+
+        <ul *ngIf="singlePost.data._comments" class="comments-ul">
+            <li *ngFor="let comment of singlePost.data._comments" class="comments-li">
+                {{comment.text}}
+            </li>
+        </ul>
+    </div>
+</div>

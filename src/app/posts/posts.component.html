@@ -1,0 +1,19 @@
+<div class="posts-wrapper">
+    <h1 class="posts-header">Posts</h1>
+    <ul *ngIf="allPosts" class="posts-ul">
+        <li *ngFor="let post of allPosts.data" class="posts-li">
+            <div class="post-container">
+                <img src="assets/default-post-cover.png" alt="" class="post-cover">
+                <div class="post-content">
+                    <h3 class="username" *ngIf="post._creator">{{post._creator.username}}</h3> 
+                    <p class="date-time" *ngIf="post.createdAt">{{post.createdAt | date:'medium'}}</p>
+                    <a routerLink="/post/{{post._id}}" class="post-title">
+                        <h1 class="post-title" *ngIf="post.title">{{post.title}}</h1>
+                    </a>
+                    <a routerLink="/post/{{post._id}}" class="post-comments">Add Comments</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>

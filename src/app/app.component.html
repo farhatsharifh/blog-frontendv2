@@ -1,0 +1,38 @@
+<!-- <div *ngIf="displayNavigation" class="nav-container"> -->
+  <nav id="navbar">
+    <div class="nav-left">
+      <img src="assets/sample-logo.png" alt="logo" class="nav-item logo">
+      <input type="input" class="nav-item searchbar" placeholder="Search...">
+    </div>
+    <div class="nav-right">
+      <a class="nav-item new-post-btn" routerLink="/newpost">Write a Post</a>
+      <img class="nav-item navbar-icon" src="assets/bell-icon.png" alt="notifications">
+      <a routerLink="/login" class="login-btn">
+        <img class="nav-item navbar-icon" src="assets/user-icon.png" alt="user icon">
+      </a>
+      
+    </div>
+  </nav> 
+<!-- </div> -->
+
+<router-outlet></router-outlet>
+
+<footer>
+    <ul class="footer-items">
+      <li>
+        <img src="assets/sample-logo.png" alt="logo" class="logo">
+      </li>
+      <li>
+        <a href="#">FAQ</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        &#169; Copyrights, 2020
+      </li>
+    </ul>
+  </footer>

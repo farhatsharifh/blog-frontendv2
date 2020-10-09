@@ -1,0 +1,117 @@
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    margin: auto;
+    background-color: #FCFCFC; 
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.nav-right {
+    float: right;
+    margin-right: 15px;
+}
+
+.nav-item {
+    height: 40px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+nav .logo {
+    width: 130px;
+    margin-left: 30px;
+}
+
+.searchbar {
+    width: 350px;
+    box-sizing: border-box;
+    border-width: 0.1px;
+    border-radius: 5px;
+    border-color: -internal-light-dark(rgb(204, 204, 204), rgb(84, 82, 82));
+    padding: 5px;
+}
+/* .searchbar:focus {
+    border-radius: 50px;
+    border-color: -internal-light-dark(rgb(2, 144, 209), rgb(0, 162, 237));
+    box-shadow: 1px 1px 0 rgb(0, 162, 237);
+} */
+
+.new-post-btn {
+    width: 130px;
+    box-shadow: inset 0px -3px 7px 0px #29bbff;
+	background: linear-gradient(to bottom, #00a2ed 5%, #0688fa 100%);
+	background-color: #3AA2D9;
+	border-radius: 5px;
+    border: 1px solid #ffffff;;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    text-shadow: 0px 1px 0px #263666;
+    outline: none;
+    padding: 10px 15px;
+}
+
+.new-post-btn:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #00a2ed 100%);
+	background-color:#0688fa;
+}
+
+.navbar-icon {
+    width: 40px;
+}
+
+footer {
+    height: 150px;
+    margin: auto;
+    background-color: #FCFCFC; 
+    box-shadow: 8px 0px 24px rgba(0, 0, 0, 0.1);
+    line-height: 150px;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+footer .logo {
+    vertical-align: middle;
+}
+
+.footer-items li {
+    list-style: none;
+}
+
+.footer-items li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* media queries */
+/* devices (815px and down) */
+@media only screen and (max-width: 815px) {
+    nav {
+        height: 95px;
+    }
+} 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .searchbar {
+        width: 200px;
+    }
+    .footer-items li a{
+        width: 80px;
+    }
+}
