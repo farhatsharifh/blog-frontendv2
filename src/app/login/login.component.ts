@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+
 import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
@@ -48,6 +49,10 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         res => {
+          // console.log("*** ", JSON.stringify(res));
+          // improve this  
+          if (res.data)
+            localStorage.setItem('userId', res.data._id);
           localStorage.setItem('token', res.token);
           this.router.navigate([this.returnUrl]);
         },

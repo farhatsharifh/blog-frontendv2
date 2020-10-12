@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Post } from '../post';
 import { PostService } from '../services/post.service';
@@ -11,7 +12,8 @@ import { PostService } from '../services/post.service';
 export class NewPostComponent implements OnInit {
 
   constructor(
-    private postService: PostService
+    private postService: PostService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -22,9 +24,11 @@ export class NewPostComponent implements OnInit {
   addNewPost(title: string, text: string): void {
     title = title.trim();
     text = text.trim();
-    if (!title || !text) { return; }
-    this.postService.createNewPost({ title, text } as Post)
+    var _creatorId = localStorage.getItem('userId');
+    if (!title || !text || !_creatorId) { return; }
+    this.postService.createNewPost({ title, text, _creatorId } as Post)
       .subscribe(post => {
+        this.router.navigate(['posts']);
     });
   }
 

@@ -29,7 +29,7 @@ export class PostService {
       );
   }
 
-  getPost(id: number): Observable<Post> {
+  getPost(id: string): Observable<Post> {
     return this.http.get<Post>(this.postUrl+`${id}`)
       .pipe(
         catchError(this.handleError<Post>('getSinglePost'))
