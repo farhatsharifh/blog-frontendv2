@@ -49,7 +49,6 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         res => {
-          // console.log("*** ", JSON.stringify(res));
           // improve this  
           if (res.data)
             localStorage.setItem('userId', res.data._id);
