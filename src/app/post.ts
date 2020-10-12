@@ -1,5 +1,5 @@
 export interface Post {
-    id: number,
+    id: string,
     title: string,
     text: string,
     link: string,
@@ -9,8 +9,5 @@ export interface Post {
         text: string,
         createdAt: Date,
     ],
-    _creator: {
-        username: string,
-        createdAt: Date,
-    }
+    _creatorId: string,
 }

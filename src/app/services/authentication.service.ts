@@ -19,4 +19,9 @@ export class AuthenticationService {
     return !!localStorage.getItem('token');
   }
   
+  logout() {
+    localStorage.setItem('userId', null);
+    localStorage.setItem('token', null);
+  }
+
 }

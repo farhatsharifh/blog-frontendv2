@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthenticationGuard } from './authentication.guard';
+import { CommentService } from './services/comment.service';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { AuthenticationGuard } from './authentication.guard';
     UserService,
     AuthenticationService,
     AuthenticationGuard,
+    CommentService,
    ],
   bootstrap: [AppComponent]
 })
