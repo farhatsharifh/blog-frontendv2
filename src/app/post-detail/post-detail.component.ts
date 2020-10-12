@@ -43,10 +43,6 @@ export class PostDetailComponent implements OnInit {
     var _creatorId = localStorage.getItem('userId');
     var _postId = this.postId;
 
-    console.log("*** commenttext ",comment);
-    console.log("*** singlePost id ",_postId);
-    console.log("*** singlePost user ", _creatorId);
-
     this.commentService.createNewComment({ text, _creatorId, _postId } as Comment)
       .subscribe(post => {
         this.router.navigate([this.returnUrl]);
