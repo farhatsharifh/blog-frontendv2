@@ -2,13 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { User } from '../user';
+import { backendUrl } from './backendUrl';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private registerUserUrl = 'http://localhost:3000/api/signup';
+  private registerUserUrl = backendUrl+'signup';
 
   constructor(
     private http: HttpClient

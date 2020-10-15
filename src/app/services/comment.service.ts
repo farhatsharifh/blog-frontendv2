@@ -4,12 +4,13 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Comment } from '../comment';
+import { backendUrl } from './backendUrl';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
-  private commentUrl = 'http://localhost:3000/api/comment';
+  private commentUrl = backendUrl+'comment';
 
   constructor(
     private http: HttpClient
