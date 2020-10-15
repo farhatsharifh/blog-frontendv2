@@ -4,15 +4,16 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Post } from '../post';
+import { backendUrl } from './backendUrl';
 
  
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  private postsUrl = 'http://localhost:3000/api/posts';  // URL to local host running express API 
-  private createPostUrl = 'http://localhost:3000/api/post';
-  private postUrl = 'http://localhost:3000/api/post/';
+  private postsUrl = backendUrl+'posts';  // URL to local host running express API 
+  private createPostUrl = backendUrl+'post';
+  private postUrl = backendUrl+'post/';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
