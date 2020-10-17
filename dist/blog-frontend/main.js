@@ -783,7 +783,7 @@ NewPostComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineC
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "backendUrl", function() { return backendUrl; });
-const backendUrl = 'http://localhost:3001/api/';
+const backendUrl = 'http://188.166.37.56:3001/api/';
 
 
 /***/ }),
