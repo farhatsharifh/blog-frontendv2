@@ -83,3 +83,7 @@
     box-sizing: border-box; 
     list-style: none;
 }
+
+.comments-li, h4 {
+    margin: 0px auto 10px;
+}

@@ -14,10 +14,8 @@
 
     <div class="comments-container">
         <h3 class="comments">Add Comments</h3>
-        <textarea class="new-comment" cols="30" rows="10" #commentText></textarea>
-        <!-- <a routerLink="['/post', singlePost._id, singlePost._creator._id]"> -->
+        <textarea class="new-comment" cols="30" rows="10" (focus)=verifyUser() #commentText></textarea>
             <button class="comment-btn" (click)=addNewComment(commentText.value)>Submit</button>
-        <!-- </a> -->
 
         <ul *ngIf="singlePost.data._comments" class="comments-ul">
             <li *ngFor="let comment of singlePost.data._comments" class="comments-li">

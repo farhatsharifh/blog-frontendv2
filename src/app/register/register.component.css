@@ -58,3 +58,13 @@
     flex-direction: row;
     margin: 10px auto;
 }
+
+.register-error-message {
+    width: 400px; 
+    margin: 0 auto;
+    padding: 7px;
+    background-color: #fccfcf;
+    border: 1px solid #af2427;
+    border-radius: 5px;
+    box-sizing: border-box;  
+}

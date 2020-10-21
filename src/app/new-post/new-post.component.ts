@@ -25,6 +25,7 @@ export class NewPostComponent implements OnInit {
     title = title.trim();
     text = text.trim();
     var _creatorId = localStorage.getItem('userId');
+    // user not logged in case handled with authentication guard approach
     if (!title || !text || !_creatorId) { return; }
     this.postService.createNewPost({ title, text, _creatorId } as Post)
       .subscribe(post => {
