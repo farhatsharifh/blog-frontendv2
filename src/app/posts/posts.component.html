@@ -10,7 +10,7 @@
                     <a routerLink="/post/{{post._id}}" class="post-title">
                         <h1 class="post-title" *ngIf="post.title">{{post.title}}</h1>
                     </a>
-                    <a routerLink="/post/{{post._id}}" class="post-comments">Add Comments</a>
+                    <a [routerLink]="['/post', post._id]" class="post-comments">Add Comments</a>
                 </div>
             </div>
         </li>

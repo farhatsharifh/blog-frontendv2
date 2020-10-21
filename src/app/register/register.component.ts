@@ -45,10 +45,12 @@ export class RegisterComponent implements OnInit {
       .subscribe(
           res => {
             localStorage.setItem('token', res.token);
+            this.userService.setregisterationStatus("success");
             this.router.navigate(['/login']);
           },
           error => {
             console.log(error);
+            this.userService.setregisterationStatus("failure");
           }
       );
 }

@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import { User } from '../user';
-import { backendUrl } from './backendUrl';
+import { BACKEND_URL } from './backendUrl';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-  private loginUrl = backendUrl+'login'; 
+  private loginUrl = BACKEND_URL+'login'; 
 
   constructor(
     private http: HttpClient
@@ -17,7 +17,7 @@ export class AuthenticationService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('userId');
   }
   
   logout() {

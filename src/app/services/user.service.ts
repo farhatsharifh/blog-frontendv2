@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { User } from '../user';
-import { backendUrl } from './backendUrl';
+import { BACKEND_URL } from './backendUrl';
 
 
 
@@ -10,7 +10,8 @@ import { backendUrl } from './backendUrl';
   providedIn: 'root'
 })
 export class UserService {
-  private registerUserUrl = backendUrl+'signup';
+  private registerUserUrl = BACKEND_URL+'signup';
+  private registerationStatus: string = '';  
 
   constructor(
     private http: HttpClient
@@ -18,6 +19,14 @@ export class UserService {
 
   register(user: User) {
     return this.http.post<any>(this.registerUserUrl, user);
+  }
+
+  getregisterationStatus(): string {
+    return this.registerationStatus;
+  }
+
+  setregisterationStatus(status: string) {
+    this.registerationStatus = status;
   }
 
 }

@@ -58,3 +58,40 @@
     flex-direction: row;
     margin: 10px auto;
 }
+
+.app-message {
+    width: 550px; 
+    margin: 100px auto 0px;
+}
+
+.success-message {
+    width: 550px; 
+    background-color: #d1fdcf;
+    border: 1px solid #3cc02b;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;  
+}
+
+.error-message {
+    width: 550px; 
+    background-color: #fccfcf;
+    border: 1px solid #af2427;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;  
+}
+
+.app-message + .loginform-container {
+    margin-top: 20px; 
+}
+
+.login-error-message {
+    width: 400px; 
+    margin: 0 auto;
+    padding: 7px;
+    background-color: #fccfcf;
+    border: 1px solid #af2427;
+    border-radius: 5px;
+    box-sizing: border-box;  
+}
