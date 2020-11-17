@@ -2,5 +2,10 @@
 body {
     /* width: 1440px; */
     margin: auto;
-    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial;
+    font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color: #bbdef0;
+    --heading-color: #000408;
 }
