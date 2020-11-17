@@ -1,5 +1,5 @@
 <div class="post-detail-container" *ngIf="singlePost">
-    <img src="assets/default-post-cover.png" alt="" class="post-cover">
+    <!-- <img src="assets/default-post-cover.png" alt="" class="post-cover"> -->
     <div class="post-content">
         <h3 class="username">{{singlePost.data._creator.username}}</h3>
         <p class="date-time">{{singlePost.data.createdAt | date:'medium'}}</p>
@@ -14,7 +14,7 @@
 
     <div class="comments-container">
         <h3 class="comments">Add Comments</h3>
-        <textarea class="new-comment" cols="30" rows="10" (focus)=verifyUser() #commentText></textarea>
+        <textarea class="new-comment" cols="30" rows="5" (focus)=verifyUser() #commentText></textarea>
             <button class="comment-btn" (click)=addNewComment(commentText.value)>Submit</button>
 
         <ul *ngIf="singlePost.data._comments" class="comments-ul">
