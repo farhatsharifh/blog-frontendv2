@@ -7,6 +7,10 @@
     box-sizing: border-box;  
 }
 
+.posts-header {
+    color: var(--heading-color);
+}
+
 .post-container{
     display: flex;
     flex-direction: column;
@@ -19,6 +23,7 @@
 
 .posts-ul {
     padding: 0;
+    margin-bottom: 70px;
 }
 
 .posts-li {

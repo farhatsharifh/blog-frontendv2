@@ -53,6 +53,6 @@ export class RegisterComponent implements OnInit {
             this.userService.setregisterationStatus("failure");
           }
       );
-}
+  }
 
 }
