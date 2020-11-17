@@ -7,7 +7,10 @@
 
 <form class="login-form loginform-container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <!-- <div class="loginform-container"> -->
-        <h2>Login here</h2>
+        <span class="inline-headings">
+            <h2>Login here&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;
+                <a routerLink="/register" class="register-btn">Register first</a></h2>
+        </span>
         <input type="text" formControlName="username" class="form-control" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
         <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
             <div class="login-error-message" *ngIf="f.username.errors.required">Username is required</div>
@@ -18,11 +21,6 @@
             <div class="login-error-message" *ngIf="f.password.errors.required">Password is required</div>
         </div>
 
-        <span class="btn-container">
-            <button class="login-btn">
-                Login
-            </button>
-            <a routerLink="/register" class="register-btn">Register</a>
-        </span>
+        <input type="submit" class="login-btn form-control" value="Login">
     <!-- </div> -->
 </form>
