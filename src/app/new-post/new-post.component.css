@@ -59,9 +59,9 @@
     margin: 15px 0 15px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .newpost-container {
-        width: 70%;
+        width: 75%;
     }
     .post-title {
         font-size: 24px;
