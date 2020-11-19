@@ -112,12 +112,16 @@
     }
     .loginform-container input,
     .login-error-message {
-        width: 350px;
+        width: 70%;
     }
 } 
 
 @media only screen and (max-width: 600px) {
     .loginform-container, .app-message {
+        width: 80%;
+    }
+    .loginform-container input,
+    .login-error-message {
         width: 80%;
     }
 } 

@@ -71,9 +71,9 @@
 
  /* media queries */
 /* devices (900px and down) */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .posts-wrapper {
-        width: 70%;
+        width: 75%;
     }
     
 } 
@@ -81,6 +81,6 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .posts-wrapper {
-        width: 80%;
+        width: 85%;
     }
 } 
