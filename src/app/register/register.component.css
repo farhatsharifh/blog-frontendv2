@@ -1,7 +1,7 @@
 .signupform-container {
     display: flex;
     flex-direction: column;
-    width: 550px; 
+    width: 40%; 
     height: 420px;
     margin: 150px auto 150px;
     padding: 15px;
@@ -24,7 +24,7 @@
 }
 
 .signupform-container input {
-    width: 400px; 
+    width: 75%; 
     margin: 15px auto;
     padding: 15px;
     box-sizing: border-box;  
@@ -60,7 +60,7 @@
 }
 
 .register-error-message {
-    width: 400px; 
+    width: 75%; 
     margin: 0 auto;
     padding: 7px;
     background-color: #fccfcf;
@@ -68,3 +68,31 @@
     border-radius: 5px;
     box-sizing: border-box;  
 }
+
+@media only screen and (max-width: 1200px) {
+    .signupform-container {
+        width: 50%;
+    }
+} 
+
+@media only screen and (max-width: 900px) {
+    .signupform-container {
+        width: 60%;
+    }   
+}
+
+@media only screen and (max-width: 700px) {
+    .signupform-container {
+        width: 70%;
+    }
+    .signupform-container  input,
+    .register-error-message {
+        width: 350px;
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    .signupform-container {
+        width: 80%;
+    }
+} 
