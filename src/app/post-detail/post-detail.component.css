@@ -43,9 +43,8 @@
 
 .new-comment {
     box-sizing: border-box;
-    border-width: 0.1px;
+    border: 1px solid #CCCCCC;
     border-radius: 5px;
-    border-color: -internal-light-dark(rgb(204, 204, 204), rgb(84, 82, 82));
     padding: 10px;
 }
 
