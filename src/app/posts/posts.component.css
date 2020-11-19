@@ -1,7 +1,7 @@
 .posts-wrapper {
     display: flex;
     flex-direction: column;
-    width: 850px; 
+    width: 60%; 
     margin: auto;
     margin-top: 70px;
     box-sizing: border-box;  
@@ -14,7 +14,7 @@
 .post-container{
     display: flex;
     flex-direction: column;
-    width: 850px; 
+    width: 100%; 
     margin: 0px auto 10px;
     border: 1px solid #CCCCCC;
     border-radius: 5px;
@@ -42,7 +42,7 @@
 }
 
 .post-cover {
-    width: 850px;
+    width: 100%;
     border: 1px solid #CCCCCC;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -72,15 +72,15 @@
  /* media queries */
 /* devices (900px and down) */
 @media only screen and (max-width: 900px) {
-    .posts-wrapper,  .post-container, .post-cover{
-        width: 550px;
+    .posts-wrapper {
+        width: 70%;
     }
     
 } 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .posts-wrapper,  .post-container, .post-cover{
-        width: 400px;
+    .posts-wrapper {
+        width: 80%;
     }
 } 

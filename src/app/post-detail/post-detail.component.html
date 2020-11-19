@@ -15,8 +15,9 @@
     <div class="comments-container">
         <h3 class="comments">Add Comments</h3>
         <textarea class="new-comment" cols="30" rows="5" (focus)=verifyUser() #commentText></textarea>
-            <button class="comment-btn" (click)=addNewComment(commentText.value)>Submit</button>
+        <button class="comment-btn" (click)=addNewComment(commentText.value)>Submit</button>
 
+        <h3 class="comments">Comments</h3>
         <ul *ngIf="singlePost.data._comments" class="comments-ul">
             <li *ngFor="let comment of singlePost.data._comments" class="comments-li">
                 <h4>{{comment._creator.username}} </h4>

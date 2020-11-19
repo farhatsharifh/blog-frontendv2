@@ -1,7 +1,7 @@
 .newpost-container {
     display: flex;
     flex-direction: column;
-    width: 850px; 
+    width: 60%; 
     margin: 100px auto 40px;
     padding: 15px;
     border: 1px solid #CCCCCC;
@@ -58,3 +58,21 @@
     align-self: flex-end;
     margin: 15px 0 15px;
 }
+
+@media only screen and (max-width: 900px) {
+    .newpost-container {
+        width: 70%;
+    }
+    .post-title {
+        font-size: 24px;
+    }
+    .post-description {
+        font-size: 20px;
+    }
+} 
+
+@media only screen and (max-width: 600px) {
+    .newpost-container {
+        width: 80%;
+    }
+} 
